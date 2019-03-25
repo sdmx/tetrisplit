@@ -1,25 +1,32 @@
-state("fceux")
+state("FCEUX", "2.2.3")
 {
     // base address = Unknown
-	byte linecount : 0x000000, 0x0050;
+	byte linecount : 0x3B1388, 0x50;
+	byte levelcount : 0x3B1388, 0x64; 
 }
 
 split
 {
-	return (settings["linecount"]);
+	//Split on every 10 Lines
+	if(settings["linecount"] && current.linecount > 10 && old.linecount != current.linecount)
+		return(true);
+	if(settings["levelcount"] && old.levelcount != current.levelcount)
+		return(true);		
 }
 
-start
-{
-	return settings["start"] && old.start1 == 0 && current.start1 == 255 && old.start2 == 0 && current.start2 == 255;
-}
+// start
+// {
+// 	return settings["start"] && old.start1 == 0 && current.start1 == 255 && old.start2 == 0 && current.start2 == 255;
+// }
 
 startup
 {
-	settings.Add("linecount", true, "");
-	settings.SetToolTip("lines", "Split on number of lines");
-	settings.Add("start", false, "Start Enable");
-	settings.SetToolTip("start", "Enable start button to start timer from menu screen");
+	settings.Add("linecount", true, "Number of Lines");
+	settings.SetToolTip("linecount", "Split by every 10 Lines");
+	settings.Add("levelcount", true, "Split by Levels");
+	settings.SetToolTip("levelcount", "Split every new level");
+	settings.Add("start", true, "Start Enable");
+	settings.SetToolTip("start", "Enable start button to start timer from New Game start");
 	
 	Action<string> DebugOutput = (text) => {
 		print("[NES Tetis Autosplitter] "+text);
