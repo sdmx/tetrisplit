@@ -8,7 +8,7 @@ state("FCEUX", "2.2.3")
 split
 {
 	//Split on every 10 Lines
-	if(settings["linecount"] && current.linecount > 10 && old.linecount != current.linecount)
+	if(settings["linecount"] && ((current.linecount%10)-1) > ((old.linecount%10)-1))
 		return(true);
 	if(settings["levelcount"] && old.levelcount != current.levelcount)
 		return(true);		
