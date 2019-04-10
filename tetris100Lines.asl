@@ -1,26 +1,38 @@
 state("FCEUX", "2.2.3")
 {
     // base address = Unknown
-	byte lineCount : 0x3B1388, 0x50;
+	byte lineCount01 : 0x3B1388, 0x50;
+	byte lineCount02 : 0x3B1388, 0x51;
 	byte levelCount : 0x3B1388, 0x0064;
-	byte score : 0x3B1388, 0x0055;
+	byte score01 : 0x3B1388, 0x0053;
+	byte score02 : 0x3B1388, 0x0054;
+	byte score03 : 0x3B1388, 0x0055; 
+	// current.score01+current.score02+current.score03
 	// byte gameStatus : 0x3B1388, 0x0001F0;
 	// byte gameOver :0x3B1388, 0x0400;
 }
 
+update
+{
+	int hexscore01 = ((current.score03*10));
+
+	print("CurrentScoreIs:" + hexscore01 );
+}
+
 split
 {
+
 	//Split on every 10 Lines
-	if(settings["lineCount"] && ((current.lineCount%16) < (old.lineCount%16)))
+	if(settings["CountByLines"] && ((current.lineCount01%16) < (old.lineCount01%16) && (current.lineCount01 != 0 )) || ((current.lineCount02 == 1  ) && (current.lineCount02 < 16 )))
 		return(true);
 
 	// Split on each new level
-	if(settings["levelCount"] && (old.levelCount < current.levelCount) && (old.levelCount != current.levelCount))
+	if(settings["CountByLevels"] && (old.levelCount < current.levelCount) && (old.levelCount != current.levelCount))
 		return(true);
 
-	// Split on every 50K Points
-	if(settings["scoreAttack"] && (current.score != 0 ) && (current.score % 16 < old.score ) && (old.score != current.score))
-		return(true);
+	//Split on every 50K Points
+	//if(settings["scoreAttack"] && (current.score != 0 ) && (current.score % 16 < old.score ) && (old.score != current.score))
+	//	return(true);
 }
 
 // start
@@ -43,12 +55,12 @@ split
 
 startup
 {
-	settings.Add("lineCount", true, "Number of Lines");
-	settings.SetToolTip("lineCount", "Split by every 10 Lines");
-	settings.Add("levelCount", true, "Split by Levels");
-	settings.SetToolTip("levelCount", "Split every new level");
-	settings.Add("scoreAttack", true, "100K Score");
-	settings.SetToolTip("scoreAttack", "Split every 100K Score");
+	settings.Add("CountByLines", true, "Number of Lines");
+	settings.SetToolTip("CountByLines", "Split by every 10 Lines");
+	settings.Add("CountByLevels", true, "Split by Levels");
+	settings.SetToolTip("CountByLevels", "Split every new level");
+	//settings.Add("scoreAttack", true, "100K Score");
+	//settings.SetToolTip("scoreAttack", "Split every 100K Score");
 	// settings.Add("start", true, "Start Enable");
 	// settings.SetToolTip("start", "Enable start button to start timer from New Game start");
 	// settings.Add("pause", false, "Pause Enable");
