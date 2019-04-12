@@ -17,7 +17,7 @@ LiveSplit AutoSplitter for Tetris for the Nintendo Enterainment System
 
 **Split by Lines**
 
- * Split every time the line count passes a 10s marker (10, 20, 30, etc). Designed for the **100 Lines** and **100 Lines, 0 Start** Categories.
+ * Split every time the line count passes a 10s marker (10, 20, 30, etc). Designed for the **[100 Lines](https://www.speedrun.com/tetrisnes/#100_Lines)** and **[100 Lines, 0 Start](https://www.speedrun.com/tetrisnes/#100_Lines_Level_0_Start)** Categories.
 
 **Start Enable**
 
@@ -45,7 +45,7 @@ LiveSplit AutoSplitter for Tetris for the Nintendo Enterainment System
 ## Project Thanks
 
 * The hardworking people at [Data Crystal](https://datacrystal.romhacking.net/wiki/Tetris_(NES):RAM_map) for providing the resources that made this project, and many like it, possible.
-* [MeatFighter](https://meatfighter.com/nintendotetrisai) for their wonderful article on applying AI to Tetris
+* [MeatFighter](https://meatfighter.com/) for their wonderful article on [applying AI to Tetris](https://meatfighter.com/nintendotetrisai).
 
 ## Contact
 
