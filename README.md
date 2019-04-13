@@ -7,10 +7,10 @@ LiveSplit AutoSplitter for Tetris for the Nintendo Enterainment System
 **Supported emulators:**
 
  * [FCEUX 2.2.3](http://www.fceux.com/web/home.html)
+ * [Nestopia 1.40+](http://nestopia.sourceforge.net/)
 
 **Future Support Planned For:**
 
- * [Nestopia 1.40+](http://nestopia.sourceforge.net/)
  * [BizHawk/NESHawk 2.3.1+](http://tasvideos.org/BizHawk.html)
  
 ## Features
