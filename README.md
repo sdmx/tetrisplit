@@ -46,6 +46,7 @@ LiveSplit AutoSplitter for Tetris for the Nintendo Enterainment System
 
 * The hardworking people at [Data Crystal](https://datacrystal.romhacking.net/wiki/Tetris_(NES):RAM_map) for providing the resources that made this project, and many like it, possible.
 * [MeatFighter](https://meatfighter.com/) for their wonderful article on [applying AI to Tetris](https://meatfighter.com/nintendotetrisai).
+* [Jonas Neubauer and Heather Ito.](https://twitch.tv/nubbinsgoody) for providing much appreciated insight into the game and  tremendous chill to the community.
 
 ## Contact
 
