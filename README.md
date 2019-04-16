@@ -17,7 +17,14 @@ LiveSplit AutoSplitter for Tetris for the Nintendo Enterainment System
 
 **Split by Lines**
 
- * Split every time the line count passes a 10s marker (10, 20, 30, etc). Designed for the **[100 Lines](https://www.speedrun.com/tetrisnes/#100_Lines)** and **[100 Lines, 0 Start](https://www.speedrun.com/tetrisnes/#100_Lines_Level_0_Start)** Categories.
+ * Split at 100 Lines.
+ * Split every time the line count passes a 10s marker (10, 20, 30, etc). 
+ 	* *Note: While both types are designed for the **[100 Lines](https://www.speedrun.com/tetrisnes/#100_Lines)** and **[100 Lines, 0 Start](https://www.speedrun.com/tetrisnes/#100_Lines_Level_0_Start)** Categories, Avg. Segment Time is recommended for every 10 lines over PB segment time.*
+ 
+**Split on Score** 
+
+ * Split at 300K
+ * Split every 100K, ending at 300K. **Currently Experimental.**
 
 **Start Enable**
 
