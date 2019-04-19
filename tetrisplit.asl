@@ -114,8 +114,8 @@ startup
 	settings.Add("CountByLevels", false, "Split by Levels");
 	settings.SetToolTip("CountByLevels", "Split every new level");
 
-	settings.Add("start", false, "Start Enable (Set -0.05 Timer)");
-	settings.SetToolTip("start", "Enable to start timer from Level Selection. (Set -0.05 Timer in Edit Splits)");
+	settings.Add("start", false, "Start Enable (Set 0.1 Timer)");
+	settings.SetToolTip("start", "Enable to start timer from Level Selection. (Set 0.1 Timer in Edit Splits)");
 	settings.Add("reset", false, "Reset Enable");
 	settings.SetToolTip("start", "Resets Timer on any screen but an active game. **EXPERIMENTAL**");
 	
