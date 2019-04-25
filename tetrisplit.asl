@@ -103,12 +103,12 @@ startup
 	settings.Add("CountBy10Lines", false, "10 Lines", "SplitByLines");
 	settings.SetToolTip("CountBy10Lines", "Split after every 10 Line Marker (10, 20, etc) up to 100 Lines.");
 
-	settings.Add("scoreAttack", true, "Split by Points");
-	settings.SetToolTip("scoreAttack", "Split by Points");
+	settings.Add("scoreAttack", true, "Split by Points **EXPERIMENTAL**");
+	settings.SetToolTip("scoreAttack", "Split by Points **EXPERIMENTAL**");
 	settings.Add("scoreAttack300K", true, "Split by 300K", "scoreAttack");
 	settings.SetToolTip("scoreAttack300K", "Split on or after 300,000 Points");
 	settings.Add("scoreAttack100K", false, "Split by 100K", "scoreAttack");
-	settings.SetToolTip("scoreAttack100K", "Split every 100,000 Points **EXPERIMENTAL**");
+	settings.SetToolTip("scoreAttack100K", "Split every 100,000 Points");
 
 
 	settings.Add("CountByLevels", false, "Split by Levels");
