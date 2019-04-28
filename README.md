@@ -8,6 +8,7 @@ LiveSplit AutoSplitter for Tetris for the Nintendo Enterainment System
 
  * [FCEUX 2.2.3](http://www.fceux.com/web/home.html)
  * [Nestopia 1.40+](http://nestopia.sourceforge.net/)
+ * [Mesen 0.9.7](https://www.mesen.ca/)
 
 **Future Support Planned For:**
 
